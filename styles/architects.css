@@ -7,6 +7,11 @@
     font-style: normal;
 }
 
+main {
+    max-width: 1060px;
+    margin: 0 auto;
+}
+
 /* shraed  style  */
 
 .display-flex {
@@ -27,9 +32,13 @@
     border: none;
 }
 
+main>section {
+    margin-top: 120px;
+}
+
 /* heading style  */
 
-.bant {
+.bant{
     font-weight: 700;
     font-size: 3rem;
 }
@@ -69,7 +78,7 @@
     color: #131313;
     font-size: 4rem;
     font-weight: bold;
-       margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .banner-description {
@@ -79,16 +88,144 @@
 
 }
 
-.banner-image{  
+.banner-image {
     width: 100%;
 }
+
+
+
+/* main style  */
+
+.team {
+    align-items: center;
+
+}
+
+.team-image{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+   
+
+}
+
+
+
+.our-features {
+    margin-left: 90px;
+    max-width: 530px;
+}
+
+.Features-titile {
+    font-weight: 500px;
+    font-size: 2.5rem;
+
+}
+
+#quick-list{
+    color: #727272;
+}
+
+#features {
+    color: #FF900E;
+}
+
+#of-our {
+    color: #131313;
+}
+
+.features-description{
+    color: #727272;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* section facts  */
+
+
+.facts-titile{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #131313;
+
+}
+
+.facts-description{
+   font-size: 1rem;
+   font-weight: 400;
+   color: #727272;
+}
+
+
+.facts-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
   
+}
+
+.fact{
+    border-radius: 8px;
+    border: 1px solid rgb(255, 144, 14);
+    height: 220px;
+    width: 220px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.fact-number{
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin: 5px auto;
+}
+
+.fact-name{
+    font-size: 1.2rem;
+    font-weight: 600px;
+    color: #727272;
+    margin: 5px auto;
+}
+
+
+
 /* responsive small device  */
 
 
 @media screen and (max-width: 576px) {
-    .nav-bar, .nav-item{
+
+   .nav-bar,
+   .nav-item,
+    .team{
         flex-direction: column;
+    }
+  
+
+    .team-image{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .facts-container{
+     justify-content: center;
+     gap: 20px;
+    } 
+
+    .our-features{
+        margin: 20px;
+    }
+
+} 
+
+
+/* medume devcie */
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .team{
+        flex-direction: column;
+    }
+
+    .our-features{
+        margin: 50px auto;
     }
     
 }
